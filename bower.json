@@ -1,0 +1,12 @@
+{
+    "name": "tenside/website",
+    "license": "CC-BY-SA-4.0",
+    "authors": [
+        "Tristan Lins <tristan.lins@bit3.de>"
+    ],
+    "dependencies": {
+        "bootstrap": "3.3.*",
+        "bootstrap-material-design": "0.1.*",
+        "font-awesome": "~4.2.0"
+    }
+}

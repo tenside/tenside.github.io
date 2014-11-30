@@ -1,0 +1,250 @@
+extends ../templates/_layout
+
+block content
+  #intro.page
+    .content
+      .alert.alert-info(style="display:inline-block") coming spring 2015
+      br
+      img(src="images/tenside.svg", width="50%")
+      br
+      br
+      figcaption
+        | Composer package management made easy!
+
+  #about.page
+    .content
+      h2 What is Tenside UI?
+
+      p
+        | Tenside is a web based package manager on top of <a href="https://getcomposer.org" target="_blank">Composer</a>.
+        | You can also call it a "Web User Interface" for Composer.
+
+      figure.text-center
+        img.img-responsive(src="images/mocks.png", style="margin-bottom: -16%")
+
+      .row.visible-sm
+        .col-md-4
+          p
+            figure
+              a(href="images/mock1.png")
+                img.img-thumbnail.img-responsive(src="images/mock1.png")
+        .col-md-4
+          p
+            figure
+              a(href="images/mock2.png")
+                img.img-thumbnail.img-responsive(src="images/mock2.png")
+        .col-md-4
+          p
+            figure
+              a(href="images/mock3.png")
+                img.img-thumbnail.img-responsive(src="images/mock3.png")
+
+      .row.hidden-sm
+        .col-md-4
+          p
+            figure
+              a(href="#mock1", data-toggle="modal")
+                img.img-thumbnail.img-responsive(src="images/mock1.png")
+        .col-md-4
+          p
+            figure
+              a(href="#mock2", data-toggle="modal")
+                img.img-thumbnail.img-responsive(src="images/mock2.png")
+        .col-md-4
+          p
+            figure
+              a(href="#mock3", data-toggle="modal")
+                img.img-thumbnail.img-responsive(src="images/mock3.png")
+
+      #mock1.modal.fade
+        .modal-dialog.modal-lg
+          .modal-content
+            .modal-header
+              button.close(type="button", data-dismiss="modal")
+                span(aria-hidden="true") &times;
+                span.sr-only Close
+              h4.modal-title Installed packages overview&nbsp;
+                small.text-danger Early working draft preview!
+            .modal-body
+              img.img-responsive(src="images/mock1.png")
+      #mock2.modal.fade
+        .modal-dialog.modal-lg
+          .modal-content
+            .modal-header
+              button.close(type="button", data-dismiss="modal")
+                span(aria-hidden="true") &times;
+                span.sr-only Close
+              h4.modal-title Package search&nbsp;
+                small.text-danger Early working draft preview!
+            .modal-body
+              img.img-responsive(src="images/mock2.png")
+      #mock3.modal.fade
+        .modal-dialog.modal-lg
+          .modal-content
+            .modal-header
+              button.close(type="button", data-dismiss="modal")
+                span(aria-hidden="true") &times;
+                span.sr-only Close
+              h4.modal-title composer.json editor&nbsp;
+                small.text-danger Early working draft preview!
+            .modal-body
+              img.img-responsive(src="images/mock3.png")
+
+      br
+
+      .row
+        .col-md-4
+          .list-group
+            .list-group-item
+              .row-action-primary
+                i.mdi-action-search
+              .row-content
+                h4.list-group-item-heading Integrated search
+                p.list-group-item-text Search packages on <a href="https://packagist.org/" target="_blank">packagist.org</a> or any other Composer repository.
+        .col-md-4
+          .list-group
+            .list-group-item
+              .row-action-primary
+                i.mdi-editor-mode-edit
+              .row-content
+                h4.list-group-item-heading Integrated editor
+                p.list-group-item-text Not only for nerds: Edit the composer.json online.
+        .col-md-4
+          .list-group
+            .list-group-item
+              .row-action-primary
+                i.mdi-action-extension
+              .row-content
+                h4.list-group-item-heading Easy dependency management
+                p.list-group-item-text Handle your dependencies with a nice and user friendly web user interface.
+        .col-md-4
+          .list-group
+            .list-group-item
+              .row-action-primary
+                i.mdi-action-settings
+              .row-content
+                h4.list-group-item-heading Easy configuration
+                p.list-group-item-text Set composer settings is easier as you expected.
+        .col-md-4
+          .list-group
+            .list-group-item
+              .row-action-primary
+                i.mdi-hardware-phonelink
+              .row-content
+                h4.list-group-item-heading Mobile ready
+                p.list-group-item-text Use Tenside anywhere, anytime.
+
+  #users.page
+    .content
+      h2 Who use Composer?
+      p
+        | There are many Projects using Composer, here are some examples.
+      .row
+        .col-md-4
+          .list-group
+            a.list-group-item(href="http://symfony.com/", target="_blank")
+              .row-picture
+                img.transparent(src="images/symfony.svg")
+              .row-content
+                h4.list-group-item-heading Symfony 2
+                p.list-group-item-text symfony.com
+        .col-md-4
+          .list-group
+            a.list-group-item(href="http://laravel.com", target="_blank")
+              .row-picture
+                img(src="images/laravel.png")
+              .row-content
+                h4.list-group-item-heading Laravel
+                p.list-group-item-text laravel.com
+        .col-md-4
+          .list-group
+            a.list-group-item(href="https://www.drupal.org/", target="_blank")
+              .row-picture
+                img(src="images/drupal.svg")
+              .row-content
+                h4.list-group-item-heading Drupal
+                p.list-group-item-text drupal.org
+      .row
+        .col-md-4
+          .list-group
+            a.list-group-item(href="http://neos.typo3.org/", target="_blank")
+              .row-picture
+                img(src="images/typo3-neos.svg")
+              .row-content
+                h4.list-group-item-heading TYPO3 Neos
+                p.list-group-item-text neos.typo3.org
+        .col-md-4
+          .list-group
+            a.list-group-item(href="https://contao.org/", target="_blank")
+              .row-picture
+                img(src="images/contao.svg")
+              .row-content
+                h4.list-group-item-heading Contao CMS
+                p.list-group-item-text contao.org
+        .col-md-4
+          .list-group
+            .list-group-item
+              .row-action-primary
+                i.mdi-action-favorite
+              .row-content
+                h4.list-group-item-heading many others&hellip;
+
+      h2 Who (may) use Tenside?
+      p
+        | Tenside is designed to work with all these systems.
+        | So it will work out of the box with all Composer ready projects.
+        | This also means, everyone who using Composer can use Tenside!
+
+      h2 Why using Tenside?
+      p
+        | There are many projects using Composer as their dependency and package manager.
+        | Not only frameworks like Symfony or Laravel, also CMS, eCommerce and user modular systems using Composer.
+        | Especially the last ones are our target group.
+      p
+        | A user friendly extension management is the final goal of Tenside.
+
+  #support.page
+    .content
+      h2 Get support
+
+      .row
+        .col-md-4
+          .list-group
+            a.list-group-item(href="https://github.com/tenside/tenside")
+              .row-action-primary
+                i.mdi-action-spellcheck
+              .row-content
+                h4.list-group-item-heading Sources
+                p.list-group-item-text View the source code.
+        .col-md-4
+          .list-group
+            a.list-group-item(href="https://github.com/tenside/tenside/issues")
+              .row-action-primary
+                i.mdi-action-assignment-turned-in
+              .row-content
+                h4.list-group-item-heading Issues
+                p.list-group-item-text Searching or reporting bugs.
+        .col-md-4
+          .list-group
+            a.list-group-item(href="https://github.com/tenside/tenside/wiki")
+              .row-action-primary
+                i.mdi-action-assignment
+              .row-content
+                h4.list-group-item-heading Wiki
+                p.list-group-item-text Read the wiki pages.
+        .col-md-4
+          .list-group
+            a.list-group-item(href="irc://chat.freenode.net/#tenside")
+              .row-action-primary
+                i.mdi-communication-message
+              .row-content
+                h4.list-group-item-heading IRC Chat #tenside
+                p.list-group-item-text Live chat.
+        .col-md-4
+          .list-group
+            a.list-group-item(href="mumble://mumble.c-c-a.org:62492")
+              .row-action-primary
+                i.mdi-communication-phone
+              .row-content
+                h4.list-group-item-heading Mumble Voice Chat
+                p.list-group-item-text Live voice chat.

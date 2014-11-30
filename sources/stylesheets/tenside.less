@@ -1,0 +1,79 @@
+/**
+ * This file is part of tenside/ui.
+ *
+ * (c) Tristan Lins <https://github.com/tristanlins>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ *
+ * This project is provided in good faith and hope to be usable by anyone.
+ *
+ * @package    tenside/ui
+ * @author     Tristan Lins <https://github.com/tristanlins>
+ * @copyright  Tristan Lins <https://github.com/tristanlins>
+ * @link       https://github.com/tenside/ui
+ * @license    https://github.com/tenside/ui/blob/master/LICENSE MIT
+ * @filesource
+ */
+
+// FontAwesome
+@import "../../bower_components/font-awesome/less/font-awesome";
+
+// Bootstrap
+@import "../../bower_components/bootstrap/less/bootstrap";
+
+// Material Design
+@import "../../bower_components/bootstrap-material-design/less/material";
+
+#main {
+  background-color: #fff;
+  box-shadow: 0 3px 10px rgba(0,0,0,.23),0 3px 10px rgba(0,0,0,.16)
+}
+
+.page {
+  position: relative;
+  min-height: 100vh;
+
+  > .content {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
+
+#intro {
+  text-align: center;
+
+  &:before {
+    content: '';
+    display: inline-block;
+    min-height: 100vh;
+    vertical-align: middle;
+    margin-right: -0.25em;
+  }
+  > .content {
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+  }
+}
+
+footer {
+  padding: 20px;
+}
+
+.list-group .list-group-item {
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  .row-content {
+    min-height: 56px;
+  }
+}
+
+.list-group .list-group-item .row-action-primary img, .list-group .list-group-item .row-picture img {
+  background-color: transparent;
+}
+
+.img-responsive {
+  margin: 0 auto;
+}
