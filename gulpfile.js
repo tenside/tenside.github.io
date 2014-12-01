@@ -56,19 +56,16 @@ gulp.task('clean-stylesheets', function (cb) {
 });
 
 gulp.task('build-stylesheets', function () {
-    return gulp.src(
-        [
-            'sources/stylesheets/**/*.less'
-        ])
+    return gulp.src('sources/stylesheets/tenside.less')
         .pipe(plumber())
         .pipe(sourcemaps.init())
-        .pipe(less())
+        .pipe(less({
+            compress: true
+        }))
         .pipe(autoprefixer({
             browsers: ['last 2 versions'],
             cascade: false
         }))
-        .pipe(minifyCss())
-        .pipe(concat('tenside.css'))
         .pipe(sourcemaps.write('.', {sourceRoot: '../sources/stylesheets'}))
         .pipe(gulp.dest('stylesheets'));
 });
